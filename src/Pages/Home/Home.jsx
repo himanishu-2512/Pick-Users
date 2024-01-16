@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Chips, SuggestionBox } from "./Components";
 import searchByName from "../../utility/searchByName";
-// import {avatar1} from "../../assets/avatars/avatar1"
 import data from "../../data/data.json";
 import { useClickAway } from "@uidotdev/usehooks";
 
@@ -13,7 +12,7 @@ export const Home = () => {
 
   const ref = useRef(null);  //reference for input tag
   const [text, setText] = useState(""); //for stroting the search value/input value
-  const [selectedList, setSelectedList] = useState([data[0]]); //List of selected user
+  const [selectedList, setSelectedList] = useState([data[0]]); //List of selected user , intially 1st users is selected
   const [suggestedList, setSuggestedList] = useState([]);//list of suggested users
   const [isOpen, setIsOpen] = useState(true);// state of open for suggestion box
   const [isFocus, setFocus] = useState(false);// state for input's focus
@@ -52,7 +51,7 @@ export const Home = () => {
         <input
           type="text"
           ref={ref}
-          className="border-0 grow w-[200px] max-w-[600px] mb-[4px] h-[100%] p-0 focus:outline-none"
+          className="border-0 grow w-[200px] max-w-[600px] mb-[8px] h-[100%] p-0 focus:outline-none"
           onFocus={() => {
             setFocus(true);
             setIsOpen(true);
