@@ -25,6 +25,7 @@ export const Home = () => {
   });
 
   useEffect(() => {
+    setHighLight(false)
     setSuggestedList(searchByName(text, selectedList));
     ref.current.focus();
   }, [selectedList, text]);

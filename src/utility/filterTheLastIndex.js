@@ -9,7 +9,7 @@ export default function filterTheLastIndex(
       setSelectedList((list) =>
         list.filter((item, index) => index != list.length - 1)
       );
-      setHighlight(false);
+    //   setHighlight(false);
     } else {
       setHighlight(true);
     }
