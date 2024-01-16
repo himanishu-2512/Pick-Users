@@ -1,13 +1,18 @@
 import React from "react";
 
-const style={
-  normal:"bg-section-divider",
-  highlight:"bg-blue-light border-blue border-2"
-}
-export const Chips = ({ icon, name, setSelectedList,highlight }) => {
-  const styles=style[highlight?"highlight":"normal"]
+const style = {
+  normal: "bg-section-divider",
+  highlight: "bg-blue-light border-blue border-2",
+};
+export const Chips = ({ icon, name, setSelectedList, highlight }) => {
+
+  const styles = style[highlight ? "highlight" : "normal"];
+
   return (
-    <div className={`rounded-full pr-[8px] ${styles} mx-[4px] my-[4px] flex justify-center items-center bg-slate-200 w-fit`}>
+
+    <div
+      className={`rounded-full pr-[8px] ${styles} mx-[4px] my-[4px] hover:bg-placeholder flex justify-center items-center  w-fit`}
+    >
       <div className="mr-[8px] bg-blue rounded-[50%] w-8 h-8 flex items-center justify-center">
         <img src={icon} alt="" className="w-7 h-7" />
       </div>
