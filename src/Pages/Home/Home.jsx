@@ -63,6 +63,7 @@ export const Home = () => {
           }}
           onChange={(e) => setText(e.target.value)}
           onKeyDown={(e) =>
+            text===""&&
             filterTheLastIndex(e.key, setSelectedList, setHighLight, highlight)
           }
           placeholder={"Search the person's name"}
