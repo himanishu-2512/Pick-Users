@@ -12,9 +12,9 @@ const styles = {
 export const Home = () => {
   const ref = useRef(null); //reference for input tag
   const [text, setText] = useState(""); //for stroting the search value/input value
-  const [selectedList, setSelectedList] = useState([data[0]]); //List of selected user , intially 1st users is selected
+  const [selectedList, setSelectedList] = useState([]); //List of selected user , intially 1st users is selected
   const [suggestedList, setSuggestedList] = useState([]); //list of suggested users
-  const [isOpen, setIsOpen] = useState(true); // state of open for suggestion box
+  const [isOpen, setIsOpen] = useState(false); // state of open for suggestion box
   const [isFocus, setFocus] = useState(false); // state for input's focus
   const [highlight, setHighLight] = useState(false);
 
@@ -37,6 +37,7 @@ export const Home = () => {
         ref.current.focus();
       }}
     >
+      
       {selectedList.length > 0 &&
         selectedList.map((item, index) => {
           return (
@@ -49,7 +50,7 @@ export const Home = () => {
           );
         })}
 
-      <div className="relative mb-">
+      <div className="relative ">
         <input
           type="text"
           ref={ref}

@@ -18,7 +18,7 @@ export const Chips = ({ icon, name, setSelectedList, highlight }) => {
       </div>
       <div className="mr-[8px]">{name}</div>
       <div
-        className="w-4 h-4"
+        className="w-4 h-4 hover:text-black"
         onClick={() => {
           setSelectedList((list) => list.filter((item) => item.name !== name));
         }}
@@ -29,7 +29,7 @@ export const Chips = ({ icon, name, setSelectedList, highlight }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-4 h-4"
+          className="w-4 h-4 hover:text-[#000000]"
         >
           <path
             strokeLinecap="round"
